@@ -1,4 +1,4 @@
-This requires several libraries and python installed to work.<br> You must also have already created an API key for both Gemini and ChatGPT.<br> I recommend using PyCharm because you can install them directly into your virtual environment. <br>Put your api key and file path on the indicated lines:
+This requires several libraries and python installed to work.<br> I recommend using PyCharm because you can install them directly into your virtual environment. <br> You must also have already created an API key for both Gemini and ChatGPT.<br>Put your api key and file path on the indicated lines:
 <br>gpt.py:
 <br>line 10: os.environ["OPENAI_API_KEY"] = "your-api-key"
 <br>line 97: folder_path = f"C:/path/to/your/folder/{folder_name}"

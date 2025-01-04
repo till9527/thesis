@@ -1,0 +1,1 @@
+This requires several libraries and python installed to work. I recommend using PyCharm because you can install them directly into your virtual environment. Put your api key and file path on the indicated lines:

@@ -19,7 +19,7 @@ base_url = "https://clinicaltrials.gov/api/v2/studies"
 def generate_question_and_answer(gene, document_context, max_retries):
     question = f"Based on the following clinical trial information, would a patient with a {gene} gene mutation be eligible for the clinical trial? {document_context}"
     retry_count = 0
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    model = genai.GenerativeModel("gemini-1.5-pro")
     while retry_count < max_retries:
         try:
             response = model.generate_content(question)
@@ -69,12 +69,6 @@ def extract_nct_id_from_url(url):
     path = urlparse(url).path
     nct_id = path.split('/')[-1]
     return nct_id
-
-
-def truncate_text(text, max_tokens):
-    # Truncate text to fit within the max token limit
-    return text[:max_tokens]
-
 
 # Function to fetch data for a list of URLs and create documents
 def fetch_data_and_create_documents_from_links(links, folder_name, file_prefix, gene, gene_short):

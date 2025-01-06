@@ -65,9 +65,6 @@ def extract_nct_id_from_url(url):
     nct_id = path.split('/')[-1]
     return nct_id
 
-def truncate_text(text, max_tokens):
-    # Truncate text to fit within the max token limit
-    return text[:max_tokens]
 # Function to fetch data for a list of URLs and create documents
 def fetch_data_and_create_documents_from_links(links, folder_name, file_prefix, gene,gene_short):
     data_list = []
